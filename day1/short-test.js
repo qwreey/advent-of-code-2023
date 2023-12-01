@@ -17,19 +17,27 @@
 
 // console.log(([a,b,c]=[1,2,_=>a+b])[2]())
 
-console.log(($=[b,c]=[(x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),_=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),...'one,two,three,four,five,six,seven,eight,nine'.split(',')])[1]())
+console.log(([a,b]=['one,two,three,four,five,six,seven,eight,nine'.split(','),(x,y)=>(x=>+x||a.indexOf(x)+1)(x.match(new RegExp(`^.*${y}(\\d|${a.join('|')})`))[1]),_=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),])[2]())
 
-console.log(($=[b,c]=[
-    (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),
-    _=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
-    ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
-])[1]())
+// console.log(($=[b,c]=[(x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),_=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),...'one,two,three,four,five,six,seven,eight,nine'.split(',')])[1]())
 
-console.log(($=[b,c]=[
-    (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),
-    _=>('0\n'+require("fs").readFileSync("i")).split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
-    ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
-])[1]())
+// console.log(([a,b,c]=[
+//     'one,two,three,four,five,six,seven,eight,nine'.split(','),
+//     (x,y)=>(x=>+x||a.indexOf(x)+1)(x.match(new RegExp(`^.*${y}(\\d|${a.join('|')})`))[1]),
+//     _=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
+// ])[2]())
+
+// console.log(($=[b,c]=[
+//     (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),
+//     _=>`0\n${require("fs").readFileSync("i")}`.split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
+//     ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
+// ])[1]())
+
+// console.log(($=[b,c]=[
+//     (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),
+//     _=>('0\n'+require("fs").readFileSync("i")).split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
+//     ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
+// ])[1]())
 
 // require("fs").readFile('i',(_,p)=>console.log(($=[b,c]=[
 //     (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp(`^.*${y}(\\d|${$.slice(2).join('|')})`))[1]),
@@ -45,9 +53,9 @@ console.log(($=[b,c]=[
 // ])[1]())
 
 // console.log(($=[b,c]=[
-//     (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp('^.*'+y+`(\\d|${$.slice(2).join('|')})`))[1]),
-//     _=>('0\n'+require("fs").readFileSync("i")).split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
-//     ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
+// (x,y)=>(x=>+x||$.indexOf(x)-1)(x.match(new RegExp('^.*'+y+`(\\d|${$.slice(2).join('|')})`))[1]),
+// _=>('0\n'+require("fs").readFileSync("i")).split('\n').reduce((t,v)=>+t+b(v,'')+b(v,'?')*10),
+// ...'one,two,three,four,five,six,seven,eight,nine'.split(',')
 // ])[1]())
 
 // console.log(($=[a,b,c]=[
