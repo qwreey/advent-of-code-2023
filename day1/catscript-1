@@ -1,0 +1,17 @@
+$profiler=require"profiler"
+$p=new profiler("");p:start"main"
+$file=fs.readFileSync"/home/ubuntu/input"
+
+$count = 0
+for line in file:gmatch"[^\n]+" do
+  $front,back
+  for str in line:gmatch"%d" do
+    $current=tonumber(str)
+    !front~front=current
+    back=current
+  |
+  count+=front*10+back
+|
+p:stop()
+log(count)
+log(p:print())

@@ -1,0 +1,27 @@
+$profiler=require"profiler"
+$p=new profiler("");p:start"main"
+$file=fs.readFileSync "/home/ubuntu/input"
+
+$nums={
+  ["^one"]=1,["^two"]=2,["^three"]=3,["^four"]=4,["^five"]=5,["^six"]=6,["^seven"]=7,["^eight"]=8,["^nine"]=9,
+}
+
+$count=0
+for line in file:gmatch"[^\n]+" do
+  $front,back
+  for cursor=1,#line do
+    for regex,num in pairs(nums) do
+      ~line:match(regex,cursor)
+        !front~front=num
+        back=num
+      |
+    |
+    $current=tonumber(line:match("^%d",cursor))
+    current~back=current
+    current&&!front~front=current
+  |
+  count+=front*10+back
+|
+p:stop()
+log(count)
+log(p:print())
