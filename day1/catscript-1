@@ -1,6 +1,6 @@
 $profiler=require"profiler"
 $p=new profiler("");p:start"main"
-$file=fs.readFileSync"/home/ubuntu/input"
+$file=fs.readFileSync"i"
 
 $count = 0
 for line in file:gmatch"[^\n]+" do
